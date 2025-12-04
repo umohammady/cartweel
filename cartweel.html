@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cartweel | Coming Soon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="description" content="Cartweel is an AI promo engine that helps marketing leaders design smarter promotions." />
+
+  <!-- Space Grotesk Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --cartweel-orange: #D45B26;
+      --cartweel-olive: #A4AB1D;
+      --cartweel-cream: #EBE1D5;
+      --cartweel-blue: #7A9ACB;
+      --text-main: #1f2933;
+      --text-muted: #6b7280;
+      --bg-body: #f5f2ed;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: "Space Grotesk", sans-serif;
+      background: radial-gradient(circle at top left, #ffffff 0, var(--bg-body) 45%, #e4ded5 100%);
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      min-height: 100vh;
+    }
+
+    .page {
+      max-width: 720px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.96);
+      border-radius: 28px;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+      padding: 36px 32px;
+      position: relative;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 32px;
+    }
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-wrap img {
+      height: 48px;
+      width: auto;
+      border-radius: 12px;
+    }
+
+    .brand-name {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      color: var(--cartweel-orange);
+    }
+
+    .pill {
+      font-size: 0.75rem;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(212,91,38,0.12), rgba(164,171,29,0.17));
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #4b5563;
+    }
+
+    .pill-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--cartweel-orange);
+      box-shadow: 0 0 0 4px rgba(212,91,38,0.25);
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      margin-bottom: 14px;
+      line-height: 1.1;
+      font-weight: 600;
+    }
+
+    h1 span {
+      background: linear-gradient(120deg, var(--cartweel-orange), var(--cartweel-olive));
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+      max-width: 460px;
+      line-height: 1.55;
+    }
+
+    .cta-label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #6b7280;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .cta-row input[type="email"] {
+      flex: 1 1 240px;
+      padding: 12px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.7);
+      font-size: 0.95rem;
+      font-family: "Space Grotesk";
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--cartweel-orange), var(--cartweel-olive));
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: 0.15s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.05);
+    }
+
+    footer {
+      margin-top: 32px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      border-top: 1px solid rgba(0,0,0,0.08);
+      padding-top: 12px;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+
+    <header>
+      <div class="logo-wrap">
+        <img src="./cartweel-logo.svg" alt="Cartweel logo" />
+      </div>
+
+      <div class="pill">
+        <span class="pill-dot"></span>
+        Private beta in progress
+      </div>
+    </header>
+
+    <h1><span>Cartweel</span> is coming soon.</h1>
+
+    <p class="subtitle">
+      Cartweel helps growth and marketing teams design promotions that balance lift, margin, and customer experience without guesswork.
+    </p>
+
+    <p class="cta-label">Get early access</p>
+
+    <form class="cta-row" action="mailto:hello@cartweel.ai" method="POST" enctype="text/plain">
+      <input type="email" name="email" placeholder="you@company.com" required />
+      <button class="btn-primary" type="submit">Notify me</button>
+    </form>
+
+    <footer>
+      <span>© <span id="year"></span> Cartweel. All rights reserved.</span>
+      <span>Built with care for growth and marketing teams.</span>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
